@@ -1,57 +1,89 @@
-## **Project : Advanced Text Processing for Scientific Literature Analysis**
+# 🚀 **Project: AI-Driven-Framework-for-Predicting-Research-Trends**
 
+[![Python](https://img.shields.io/badge/Python-3.7%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/Notebook-Jupyter-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![Transformers](https://img.shields.io/badge/Transformers-BERT-ffcc00?logo=huggingface&logoColor=black)](https://huggingface.co/transformers/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-### **Overview**
-This project builds an intelligent NLP and ML-based framework to analyze and forecast trends in scientific literature. Leveraging transformer models like BERT and tools like BERTopic, it enables automated topic modeling, weak signal detection, and trend forecasting using LSTM and ARIMA. Designed to help researchers uncover emerging topics and interdisciplinary connections.
+---
 
-**Files**
-Advanced Text Processing for Scientifc Literature Analysis.ipynb: Jupyter notebook containing complete code for data collection, preprocessing, modeling, forecasting, and visualization.
+### 📖 Overview
 
-### Installation Requirements
-Python 3.7+
-Jupyter Notebook
+An intelligent NLP and ML-based framework to analyze and forecast trends in scientific literature. Leveraging transformer models like **BERT** and tools like **BERTopic**, this project enables **topic modeling**, **weak signal detection**, and **trend forecasting** using **LSTM** and **ARIMA**. Designed to help researchers uncover emerging topics and interdisciplinary connections.
 
-Install Dependencies
-Install the required libraries using the following command:
+---
+
+### 📁 Files
+
+**Advanced_Text_Processing_for_Scientific_Literature_Analysis.ipynb**  
+Contains the complete code for:
+- Data collection
+- Preprocessing
+- Topic modeling
+- Weak signal detection
+- Forecasting
+- Visualization
+
+---
+
+### ⚙️ Installation Requirements
+
+- Python 3.7+  
+- Jupyter Notebook
+
+#### 📦 Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
-Or manually:
-```bash
+Or install manually:
+```
 pip install pandas numpy scikit-learn tensorflow transformers bertopic matplotlib
 ```
-### Data Sources
-ArXiv – Open-access scientific papers  
-PubMed – Biomedical literature  
-CrossRef – Academic metadata
+### 🔗 Data Sources
+The project pulls literature data from the following trusted academic repositories:  
+ArXiv – Open-access repository for scientific preprints  
+PubMed – Biomedical and life sciences literature  
+CrossRef – Metadata for academic publications  
 
-API Configuration
-Before running the notebook, export your API keys:
+### 🔐 API Configuration
+Before running the notebook, ensure your environment is configured with the necessary API keys.  
+Create environment variables:  
 ```
-export ARXIV_API_KEY=<Your Key>
-export PUBMED_API_KEY=<Your Key>
-export CROSSREF_API_KEY=<Your Key>
+export ARXIV_API_KEY=<Your_ArXiv_Key>
+export PUBMED_API_KEY=<Your_PubMed_Key>
+export CROSSREF_API_KEY=<Your_CrossRef_Key>
 ```
-### Usage
-1. Open the notebook in Jupyter or Colab  
-2. Follow the step-by-step instructions  
-3. Data Collection (from ArXiv, PubMed, CrossRef)  
-4. Preprocessing (tokenization, cleaning)  
-5. Topic Modeling (with BERTopic + BERT)  
-6. Weak Signal Detection (TF-IDF + volatility)  
-7. Trend Forecasting (LSTM, ARIMA)  
-8. Visualization (temporal plots of key terms/trends)
+You can also place them in a .env file and load them with dotenv.
 
-### Results
-The system identifies dominant themes, emerging signals, and future research trends — enabling data-driven literature analysis and better research planning.
+### 🧪 Usage
+To run the system, follow these steps:  
+Open the notebook in Jupyter or Google Colab  
+Execute the cells in order to perform the following:
 
-### Limitations
-● Data Quality: Dependent on the completeness of fetched data  
-● Compute Demand: Resource-intensive with large datasets  
-● Model Complexity: Deep models may be time-consuming to train
+### ▶️ Steps:
+**1. Data Collection:**
+Fetch research articles from ArXiv, PubMed, and CrossRef APIs  
+**2. Data Preprocessing:**
+Clean and normalize text using spaCy/NLTK  
+**3. Topic Modeling:**
+Use BERTopic + BERT embeddings for dynamic topic extraction  
+**4. Weak Signal Detection:**
+Identify low-frequency but volatile emerging terms using TF-IDF and contextual embeddings  
+**5. Trend Forecasting:**
+Train LSTM and ARIMA models on keyword usage to predict future research trajectories  
+**6. Visualization:**
+Plot term volatility, keyword evolution, and topic clusters
 
-### Future Enhancements
-● Real-time data ingestion and updates  
-● Scalable processing for large-scale literature  
-● Domain-specific fine-tuning (e.g., biomedical, finance)
+### 📊 Results
+The system identifies dominant research themes, weak signals, and future trends, enabling data-driven scientific exploration and strategic research planning.
 
+### ⚠️ Limitations
+Data Quality: Depends on the availability and consistency of API data  
+Compute Demand: Deep models like LSTM and BERTopic require high memory and processing power  
+Model Complexity: Training can be time-intensive on large datasets
+
+### 🌱 Future Enhancements
+Integrate real-time literature feeds (RSS, CrossRef live)  
+Add domain-specific tuning for biomedical or financial corpora  
+Support streaming dashboards using Streamlit or Dash
